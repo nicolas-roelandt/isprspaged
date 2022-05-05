@@ -137,17 +137,26 @@ $if(subtitle)$
 <h1 class="subtitle"><span>$subtitle$</span></h1>
 $endif$
 <div class="author">
+<p class="author">
 $for(author)$
-<p class="author">$author$</p>
-$endfor$
-</div>
-$if(affiliation)$
-<div class="author-afil">
-$for(affiliation)$
-<p class="author-afil">$affiliation$</p>
-$endfor$
-</div>
+$if(author.name)$
+<span class="author">$author.name$,</span>
+$else$
+<span class="author">$author$</span>
 $endif$
+$endfor$
+</p>
+</div>
+<div class="author-afil">
+<p class="author-afil">
+$for(affiliation)$
+$if(affiliation.name)$
+<span class="author-afil">$affiliation.name$,</span>
+$else$
+<span class="author-afil">$affiliation$</span>
+$endif$
+$endfor$
+</p>
 </div>
 $if(keywords)$
 <div class="keywords">
