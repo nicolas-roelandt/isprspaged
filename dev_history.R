@@ -14,3 +14,11 @@ usethis::use_description(
     )
   ))
 
+usethis::use_rmarkdown_template(
+  template_name = "ISPRS paged",
+  template_dir = NULL,
+  template_description = "Pagedown template for ISPRS publication",
+  template_create_dir = FALSE
+)
+
+usethis::use_mit_license()

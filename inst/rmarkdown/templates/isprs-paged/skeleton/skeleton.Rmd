@@ -1,0 +1,13 @@
+---
+title: "Title of the article"
+author: "Author Name"
+date: "Date"
+abstract: "Lorem Ipsum Dolor"
+output:
+  isprs-paged::article
+knit: pagedown::chrome_print
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
