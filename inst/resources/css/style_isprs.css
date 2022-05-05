@@ -60,6 +60,9 @@
 /* string variables */
 h1.title {
   string-set: h1-title content(text);
+  text-align: center;
+  font-size: 12pt;
+  text-transform: uppercase;
 }
 
 .shorttitle1 {
@@ -83,18 +86,16 @@ h1.title {
 
 /* normal page */
 @page {
-
+  margin-top: 25mm;
+  margin-bottom: 25mm;
+  margin-left: 20mm;
+  margin-right: 20mm;
 }
 
 /* counter */
 @page:right {
-
     @top-center {
-      content: string(h1-title) " | ";
-      font-family: var(--header-font);
-      text-align: right;
-      margin-right: -3cm;
-      color: var(--main-color);
+      content: none
     }
 
     /* numbering */
@@ -104,12 +105,8 @@ h1.title {
 }
 
 @page:left {
-
     @top-center {
-      content: " | " string(h1-text);
-      font-family: var(--header-font);
-      margin-left: -11cm;
-      color: var(--main-color);
+      content: none;
     }
 
     /* numbering */
@@ -120,11 +117,11 @@ h1.title {
 
 /* paragraph margins */
 .pagedjs_left_page p,  .pagedjs_left_page ul, .pagedjs_left_page h2, .pagedjs_left_page h3, .pagedjs_left_page h4, .pagedjs_left_page ol, .pagedjs_left_page #refs {
-  margin-right: 15%
+  margin-right: 0%
 }
 
 .pagedjs_right_page p,  .pagedjs_right_page ul, .pagedjs_right_page h2, .pagedjs_right_page h3, .pagedjs_right_page h4 ,  .pagedjs_right_page ol ,  .pagedjs_right_page #refs {
-  margin-left: 15%
+  margin-left: 0%
 }
 
 /* ------------------------ Front Cover --------------------- */
@@ -160,12 +157,16 @@ h1.title {
   }
 
 /* ------------------------ Fonts ---------------------------- */
-p, ul, a, ol {
+p, ul, a, ol, .csl-entry, caption, th, td{
     font-family: var(--main-font);
+    font-size: 9pt;
 }
 
 h1, h2, h3, h4 {
     font-family: var(--main-font);
+    line-height: 18pt;
+    font-size: 9pt;
+
 }
 
 
@@ -173,7 +174,7 @@ h1, h2, h3, h4 {
 /* --------------------- CSS Fragmentation --------------------------- */
 /* page breaks; aka CSS fragmentation */
 .level1 {
-    break-before: page;
+    break-before: avoid;
   }
 
 .section > h1, .section > h2, .section > h3, .section > h4, .section > h5, .section > h6 {
@@ -199,4 +200,49 @@ caption {
 }
 img {
   max-width: 100%;
+}
+
+#abstract-title {
+  text-align: left;
+  font-size: 9pt;
+}
+
+#keywords {
+  text-align: left;
+  font-size: 9pt;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+/* Front page or title page */
+.front-page {
+  width: 100%;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+div.main{
+  column-count: 2;
+  column-gap: 6mm;
+  column-width: 82mm;
+}
+
+#references-1 {
+  line-height: 9pt;
+}
+p.caption{
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  margin: auto;
 }
