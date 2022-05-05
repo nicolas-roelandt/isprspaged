@@ -252,3 +252,7 @@ table {
   font-family: "Times New Roman";
   text-align: center;
 }
+
+p {
+  text-align: justify;
+}
