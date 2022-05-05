@@ -1,0 +1,13 @@
+Package: isprspaged
+Title: Pagedown template for ISPRS publication
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Nicolas", "Roelandt", , "nicolas.roelandt@univ-eiffel.fr", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-9698-4275")),
+    person("Uni. Gustave Eiffel", role = "cph")
+  )
+Description: Pagedown template for ISPRS publication
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
