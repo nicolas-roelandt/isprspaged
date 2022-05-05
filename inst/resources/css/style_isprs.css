@@ -246,3 +246,9 @@ table, th, td {
 table {
   margin: auto;
 }
+
+.author, .author-afil{
+  font-size: 9pt;
+  font-family: "Times New Roman";
+  text-align: center;
+}
