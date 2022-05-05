@@ -1,4 +1,4 @@
-name: ISPRS paged
+name: ISPRS article
 description: >
    Pagedown template for ISPRS publication
 create_dir: FALSE

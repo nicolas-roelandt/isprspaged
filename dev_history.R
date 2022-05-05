@@ -22,3 +22,5 @@ usethis::use_rmarkdown_template(
 )
 
 usethis::use_mit_license()
+usethis::use_namespace(roxygen = TRUE)
+devtools::document()
