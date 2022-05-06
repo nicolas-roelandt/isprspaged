@@ -13,14 +13,14 @@ article <- function(other_css = NULL,
   pandoc_html <-
     pkg_resource("html/template_paged.html")
   csl <-
-    pkg_resource("css/isprs.csl")
+    pkg_resource("css/isprs-pagedown.csl")
 
   # template
   pagedown::html_paged(
     css = c(other_css, main_css),
     template = pandoc_html,
     toc = FALSE,
-    #csl = csl, # if passing csl schema, citations aro but section numbering is out
+    csl = csl, # if passing csl schema, citations aro but section numbering is out
     ...
   )
 }

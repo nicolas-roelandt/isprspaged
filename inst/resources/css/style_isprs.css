@@ -212,7 +212,6 @@ img {
   font-size: 9pt;
   text-transform: uppercase;
   font-weight: bold;
-
 }
 
 /* Front page or title page */
@@ -231,8 +230,9 @@ div.main{
   column-width: 82mm;
 }
 
-#references-1 {
-  line-height: 9pt;
+.csl-entry{
+  padding-bottom: 9pt;
+  text-align: justify;
 }
 p.caption{
   text-align: center;
@@ -255,4 +255,9 @@ table {
 
 p {
   text-align: justify;
+}
+
+a{
+  color: black;
+  text-decoration-line: none;
 }
