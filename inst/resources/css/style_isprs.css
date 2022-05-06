@@ -233,6 +233,7 @@ div.main{
 .csl-entry{
   padding-bottom: 9pt;
   text-align: justify;
+  break-after: avoid;
 }
 p.caption{
   text-align: center;
