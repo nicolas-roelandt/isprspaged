@@ -76,10 +76,10 @@ limited to approximately twelve (12) pages. In any case, the minimum
 length is six (6) pages. The font type Times New Roman with a size of
 nine (9) points is to be used.
 
-  
+
 ```{r settingd-tibble, results="hide"}
 settings <- tibble::tribble(
-          ~settings, ~mm, ~inches,
+          ~Setting, ~mm, ~inches,
              "Top", 25L,       1,
           "Bottom", 25L,       1,
             "Left", 20L,     0.8,
@@ -88,15 +88,17 @@ settings <- tibble::tribble(
   "Column Spacing",  6L,    0.25
   )
 caption <- "Margin settings for A4 size page."
-
-table_nums(name = "gt", caption = caption)
+table_nums(name = "table1", caption = caption)
 ```
+
 
 ```{r display-settings}
-settings %>% knitr::kable(caption = caption, align = 'lcc')
+knitr::kable(x = settings, 
+             format = "html", 
+             align = "lcc")
 ```
 
-`r paste0('<p class="caption">',table_nums("gt"), '</p>')`
+`r paste0('<p class="caption">',table_nums("table1"), '</p>')`
 
 # TITLE AND ABSTRACT BLOCK
 
