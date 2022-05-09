@@ -7,6 +7,11 @@ Authors@R: c(
     person("Uni. Gustave Eiffel", role = "cph")
   )
 Description: Pagedown template for ISPRS publication
+Suggests:
+    knitr,
+    rmarkdown,
+    pagedown,
+    captioner
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
