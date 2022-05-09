@@ -14,7 +14,12 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(captioner) # handle figures and tables numbering
+
+# Declare variables for figures and table counting
+fig_nums <- captioner::captioner()
+table_nums <- captioner::captioner(prefix = "Table")
 ```
 
 
@@ -72,17 +77,26 @@ length is six (6) pages. The font type Times New Roman with a size of
 nine (9) points is to be used.
 
   
-  |Setting| A4 size paper|       
-  |---------------|---|------|
-  |               |mm |inches|
-  |Top            |25 | 1.0|
-  |Bottom         |25 | 1.0|
-  |Left           |20 | 0.8|
-  |Right          |20 | 0.8|
-  |Column Width   |82 | 3.2|
-  |Column Spacing |6  | 0.25|
+```{r settingd-tibble, results="hide"}
+settings <- tibble::tribble(
+          ~settings, ~mm, ~inches,
+             "Top", 25L,       1,
+          "Bottom", 25L,       1,
+            "Left", 20L,     0.8,
+           "Right", 20L,     0.8,
+    "Column Width", 82L,     3.2,
+  "Column Spacing",  6L,    0.25
+  )
+caption <- "Margin settings for A4 size page."
 
-  : Margin settings for A4 size page.
+table_nums(name = "gt", caption = caption)
+```
+
+```{r display-settings}
+settings %>% knitr::kable(caption = caption, align = 'lcc')
+```
+
+`r paste0('<p class="caption">',table_nums("gt"), '</p>')`
 
 # TITLE AND ABSTRACT BLOCK
 
@@ -163,8 +177,19 @@ directly beneath the illustration. Use single spacing if they use more
 than one line. All captions are to be numbered consecutively, e.g.
 Figure 1, Figure 2, Figure 3, .. and Table 1, Table 2, Table 3, \...
 
-![Figure placement and
-numbering.](figures/test_sites/fig1.png)
+```{r, results='hide'}
+caption <- "Figure placement and numbering."
+fig_nums(name = "fig1", caption = caption)
+```
+
+```{r fig1, eval=TRUE}
+knitr::include_graphics("figures/test_sites/fig1.png")
+```
+
+`r paste0('<p class="caption">',fig_nums("fig1"), '</p>')`
+
+
+
 
 
 ### Copyright
