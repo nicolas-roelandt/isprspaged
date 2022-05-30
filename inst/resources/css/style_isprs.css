@@ -256,6 +256,13 @@ table {
   text-align: center;
 }
 
+p.commission{
+  font-size: 9pt;
+  font-family: "Times New Roman";
+  text-align: center;
+  font-weight: bold;
+}
+
 p {
   text-align: justify;
 }

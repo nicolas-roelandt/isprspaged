@@ -2,6 +2,7 @@
 title: "Guidelines for authors preparing a full paper to be submitted to ISPRS events"
 author:  "*********** (for review, names must be rendered anonymous)"
 affiliation: "<sup>**********</sup> (for review, affiliations must be rendered anonymous)"
+commission: "Commission XX, WG XX/YY"
 date: "Date"
 abstract: 
   "These guidelines are provided for preparation of <strong>full papers submitted to ISPRS events</strong> (Congress, Geospatial Week, Symposia, smaller events). If the double-blind review process leads to acceptance, they will be either published in the series of Volumes of The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences or of The ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences.<br /> 
