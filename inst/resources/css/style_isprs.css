@@ -64,6 +64,8 @@ h1.title {
   text-align: center;
   font-size: 12pt;
   text-transform: uppercase;
+  margin-bottom: 18pt;
+  margin-top: 0pt;
 }
 
 .shorttitle1 {
@@ -179,27 +181,31 @@ h1, h2{
 
 }
 
-h3, h3 + p {
-  display: inline;
-  line-height: 11pt
+div.section.level3 h3, h3 + p {
+  font-family: var(--main-font);
   font-size: 9pt;
+  text-align: justify;
+  text-justify: inherit;
+  display: inline;
   margin-top: 0;
   margin-bottom: 0;
+  line-height: 9pt;
 }
 
 /* --------------------- CSS Fragmentation --------------------------- */
 /* page breaks; aka CSS fragmentation */
 .level1 {
-    break-before: avoid;
+    break-before: column;
   }
 
 .section > h1, .section > h2, .section > h3, .section > h4, .section > h5, .section > h6 {
-  break-after: avoid;
+  break-after: column;
 }
 
 .footnotes {
   break-before: always;
   break-after: always;
+  margin-top: 9pt;
 }
 .figure {
   break-inside: avoid;
@@ -222,6 +228,10 @@ img {
 #abstract-title {
   text-align: left;
   font-size: 9pt;
+  margin-top: 18pt;
+}
+div.abstract p {
+  margin-bottom: 18pt;
 }
 
 #keywords {
@@ -229,6 +239,7 @@ img {
   font-size: 9pt;
   text-transform: uppercase;
   font-weight: bold;
+
 }
 
 /* Front page or title page */
@@ -250,7 +261,7 @@ div.main{
 .csl-entry{
   padding-bottom: 9pt;
   text-align: justify;
-  break-after: avoid;
+  break-after: none;
 }
 p.caption{
   text-align: center;
@@ -278,6 +289,7 @@ p.commission{
   font-family: "Times New Roman";
   text-align: center;
   font-weight: bold;
+  margin: 18pt 0pt 18pt 0pt;
 }
 
 p {
@@ -290,11 +302,14 @@ a{
 }
 
 hr.footnote-break {
-  margin-top: 18pt;
-  margin-bottom: 9pt;
-  height: 1pt;
-  background: black;
+  margin: 18pt 0pt 9pt  0pt;
+  border-width:1px;
   width: 50mm;
   border-bottom-style: solid;
-  border-bottom-color: black !important;
+  border-bottom-color: grey !important;
   }
+html body div.pagedjs_pages div#page-1.pagedjs_page.pagedjs_first_page.pagedjs_right_page div.pagedjs_sheet div.pagedjs_pagebox div.pagedjs_area div.pagedjs_page_content div.footnote-area::after {
+  content: "* Corresponding author";
+  color: red;
+}
+
